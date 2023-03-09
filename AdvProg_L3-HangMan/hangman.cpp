@@ -17,7 +17,7 @@ using std::cin;
 int generateRandomNumber(const int min, const int max)
 {
     // TODO: Return a random integer number between min and max
-    return rand()%(max-min+1) + min;
+    return rand() % (max - min + 1) + min;
 }
 
 vector<string> readWordListFromFile(const string& filePath)
@@ -52,9 +52,9 @@ bool isCharInWord(const char ch, const string& word)
 {
     // TODO: return true if ch is in word else return false
 
-    for(auto x:word)
+    for(int i=0; i<(int)word.size(); i++)
     {
-        if(x==ch)
+        if(word[i]==ch)
         {
             return true;
         }
@@ -74,9 +74,9 @@ string chooseWordFromList(const vector<string>& wordList, int index)
     // TODO: Return a lowercase word in the index position of the vector wordList.
     string answer;
     answer = wordList[index];
-    for(auto &x:answer)
+    for(int i=0; i<(int)answer.size(); i++)
     {
-        x = tolower(x);
+        answer[i] = tolower(answer[i]);
     }
     return answer;
 }
@@ -89,7 +89,7 @@ string chooseWordFromList(const vector<string>& wordList, int index)
 ***/
 string generateHiddenCharacters(string answerWord){
     // TODO: Based on answerWord's length, generate hidden characters in form of "---"
-    string secretWord;
+    string secretWord = "";
     for(int i=0; i<(int)answerWord.size(); i++)
         secretWord += '-';
     return secretWord;
