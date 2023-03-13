@@ -31,7 +31,7 @@ vector<string> filterWordsByLen(int wordLen, const vector<string>& vocabulary)
 
     for(auto word:vocabulary) 
     {
-        if(word.size() == wordLen)
+        if((int)word.size() == wordLen)
             answer.push_back(word);
     }
     return answer;
@@ -160,7 +160,7 @@ bool isWholeWord(const string& mask)
     //Write your code here
 
     for(auto c:mask)
-        if(c=='-' || ch == '_')
+        if(c=='-' || c == '_')
             return false;
     return answer = true;
 }
@@ -182,7 +182,7 @@ bool wordConformToMask(const string& word, const string& mask, char ch)
     bool answer;
     //Write your code here
 
-    for(int i=0; i<mask.size(); i++)
+    for(int i=0; i<(int)mask.size(); i++)
     {
         if(word[i]==ch && mask[i]!=ch)
             return false;
