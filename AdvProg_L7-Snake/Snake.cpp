@@ -25,6 +25,13 @@ Snake::~Snake()
             p = nextNode;
     }
     */
+
+    SnakeNode* p = this->tail;
+
+    while(p!=NULL)
+    {
+        SnakeNode* nextNode = p->next;
+    }
 }
 
 // DO NOT CHANGE METHOD

@@ -18,10 +18,10 @@ struct SnakeNode
 
 class Snake
 {
-    SnakeNode *head, *tail;
+   
+    int score; SnakeNode *head, *tail;
     Game& game;    
     int cherry;
-    int score;
 public:
     Snake(Game& _game, Position start);
     ~Snake();
